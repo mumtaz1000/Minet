@@ -1,13 +1,11 @@
 package com.minet.login;
 
+import com.minet.cashierMenu.CashierMenu;
 import com.minet.userAccountHandler.UserAccountHandlerController;
 import com.minet.utils.FileHandler;
 
 import java.io.IOException;
-import java.nio.file.FileSystem;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 import static com.minet.utils.PasswordHandler.createCrypticPassword;
@@ -26,12 +24,13 @@ public class Login extends UserAccountHandlerController {
             if (fileHandlerObject.searchDataFromFile(model.getUsername(), usernameIndex, model.getUserFileName())) {
                 requestPassword();
                 crypticPassword = createCrypticPassword(model.getPassword());
-                allUserData = file.readFile(model.getUserFileName(), model.getUsername());         userData = String.valueOf(fileHandlerObject.singleUserData(allUserData));
+                allUserData = file.readFile(model.getUserFileName(), model.getUsername());
+                userData = String.valueOf(fileHandlerObject.singleUserData(allUserData,1));
                 isPasswordCorrect = checkPassword(userData, crypticPassword);
-                if(isPasswordCorrect){
-                    userRole = fileHandlerObject.singleUserData(String.valueOf(allUserData)).get(3);
-                    System.out.println("You are  "+userRole);
-                }else{
+                if (isPasswordCorrect) {
+                    userRole = fileHandlerObject.singleUserData(String.valueOf(allUserData),1).get(3);
+                    handleUserMenu(userRole);
+                } else {
                     System.out.println("Incorrect password");
                 }
             } else {
@@ -52,9 +51,24 @@ public class Login extends UserAccountHandlerController {
 
         password = parts[passwordIndex].trim();
 
-        if (Objects.equals(password,passwordInput)) {
+        if (Objects.equals(password, passwordInput)) {
             isPasswordCorrect = true;
         }
         return isPasswordCorrect;
+    }
+
+    private void handleUserMenu(String userRole) {
+        switch (userRole) {
+            case "Admin" -> {
+                System.out.println("You are admin");
+            }
+            case "Manager" -> {
+                System.out.println("You are manager");
+            }
+            case "Cashier" -> {
+                new CashierMenu();
+            }
+            default -> System.out.println("Do not know abut this position");
+        }
     }
 }

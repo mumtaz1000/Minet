@@ -1,8 +1,6 @@
 package com.minet.userAccountHandler;
 
 import com.minet.utils.PrintHandler;
-
-import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 public class UserAccountHandlerController {
@@ -11,19 +9,19 @@ public class UserAccountHandlerController {
     private final Scanner scanner = new Scanner(System.in);
 
     public void requestFullname() {
-        String fullname = view.requestFullName();
+        String fullname = view.fullNameMessage();
 
         model.setFullname(fullname);
     }
 
     public void requestUsername() {
-        String username = view.requestUserName();
+        String username = view.userNameMessage();
 
         model.setUsername(username);
     }
 
     public void requestPassword() {
-        String password = view.requestPassword();
+        String password = view.passwordMessage();
 
         model.setPassword(password);
     }

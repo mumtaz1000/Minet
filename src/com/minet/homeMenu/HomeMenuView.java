@@ -11,10 +11,7 @@ public class HomeMenuView {
         PrintHandler.appTitle();
         System.out.println("Main menu options:");
         PrintHandler.optionList(menuOptions);
-        printRequest();
-    }
-    public void printRequest(){
-        System.out.print("Choose an option press enter: ");
+        PrintHandler.printRequest();
     }
 
 }

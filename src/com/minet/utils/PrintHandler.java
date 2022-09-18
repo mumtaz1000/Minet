@@ -48,6 +48,10 @@ public class PrintHandler {
         }
     }
 
+    public static void printRequest() {
+        System.out.print("Choose an option press enter: ");
+    }
+
     public static void printInvalidOption() {
         System.out.println("⚠️ Invalid option");
     }

@@ -2,15 +2,9 @@ package com.minet.signup;
 
 import com.minet.userAccountHandler.UserAccountHandlerController;
 import com.minet.utils.FileHandler;
-import com.minet.utils.PrintHandler;
 
 import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
 
 public class Signup extends UserAccountHandlerController {
 

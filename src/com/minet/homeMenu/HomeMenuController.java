@@ -26,7 +26,7 @@ public class HomeMenuController {
             model.handleOption(selectedOption);
         } catch (NumberFormatException | IndexOutOfBoundsException | NoSuchAlgorithmException exception) {
             PrintHandler.printInvalidOption();
-            view.printRequest();
+            PrintHandler.printRequest();
             requestUserInput();
         } catch (IOException e) {
             throw new RuntimeException(e);

@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.File;
 import java.io.RandomAccessFile;
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class FileHandler {
@@ -59,6 +58,20 @@ public class FileHandler {
         return found;
     }
 
+    public void readFromFile(String filename){
+        try {
+            File fileObj = new File(filename);
+            Scanner myReader = new Scanner(fileObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred while reading data from file.");
+            e.printStackTrace();
+        }
+    }
     public String readFile(String filename, String searchName) {
         String requiredUserData = null;
 
@@ -81,14 +94,42 @@ public class FileHandler {
 
         return requiredUserData;
     }
+    public void updateFile(String searchData,String updatedString, String filename) throws IOException {
+        String temporaryFilePath = "src/assets/TemporaryFile.txt";
+        RandomAccessFile randomAccessFile = new RandomAccessFile(filename, "rw");
+        File temporaryFile = new File(temporaryFilePath);
+        RandomAccessFile temporaryRandomAccessFile = new RandomAccessFile(temporaryFile,"rw");
+        String nameNumberString;
 
-    public List<String> singleUserData(String listOfUsers) {
+        randomAccessFile.seek(0);
+        while(randomAccessFile.getFilePointer() < randomAccessFile.length()){
+            nameNumberString = randomAccessFile.readLine();
+
+            if(Objects.equals(searchData,nameNumberString)){
+                System.out.println("Required data found to update!!");
+                nameNumberString = updatedString;
+            }
+            temporaryRandomAccessFile.writeBytes(nameNumberString);
+            temporaryRandomAccessFile.writeBytes(System.lineSeparator());
+        }
+        randomAccessFile.seek(0);
+        temporaryRandomAccessFile.seek(0);
+        while(temporaryRandomAccessFile.getFilePointer() < temporaryRandomAccessFile.length()) {
+            randomAccessFile.writeBytes(temporaryRandomAccessFile.readLine());
+            randomAccessFile.writeBytes(System.lineSeparator());
+        }
+        randomAccessFile.setLength(temporaryRandomAccessFile.length());
+        temporaryRandomAccessFile.close();
+        randomAccessFile.close();
+        temporaryFile.delete();
+        System.out.println("Data is update!!!");
+    }
+    public List<String> singleUserData(String listOfUsers, int startIndex) {
         List<String> requiredData = new ArrayList<>();
         String[] parts = listOfUsers.split(",");
-        requiredData.add(parts[1]);
-        requiredData.add(parts[2]);
-        requiredData.add(parts[3]);
-        requiredData.add(parts[4]);
+        for(int index = startIndex; index<parts.length; index++){
+            requiredData.add(parts[index]);
+        }
         return requiredData;
     }
 
