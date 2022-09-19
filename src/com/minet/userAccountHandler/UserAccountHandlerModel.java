@@ -2,12 +2,10 @@ package com.minet.userAccountHandler;
 
 import com.minet.utils.PasswordHandler;
 
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 public class UserAccountHandlerModel {
-    private static final String ALGORITHM_NAME = "SHA-256";
 
     private final String fileName = "src/assets/AtmUserData.txt";
     private String fullname;

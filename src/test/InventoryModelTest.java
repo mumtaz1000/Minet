@@ -1,11 +1,10 @@
-package com.minet.inventory;
+package test;
 
-import org.junit.jupiter.api.BeforeEach;
+import com.minet.inventory.InventoryModel;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class InventoryModelTest {
     InventoryModel model = new InventoryModel();

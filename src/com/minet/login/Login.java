@@ -43,7 +43,7 @@ public class Login extends UserAccountHandlerController {
         }
     }
 
-    private boolean checkPassword(String userData, String passwordInput) {
+    public boolean checkPassword(String userData, String passwordInput) {
         String password;
         boolean isPasswordCorrect = false;
         int passwordIndex = 2;

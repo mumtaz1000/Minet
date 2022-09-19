@@ -1,12 +1,14 @@
-package com.minet.userAccountHandler;
+package test;
 
+import com.minet.userAccountHandler.UserAccountHandlerModel;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserAccountHandlerModelTest {
-    private UserAccountHandlerModel model;
+    UserAccountHandlerModel model;
 
     @BeforeEach
     void init() {
@@ -26,5 +28,10 @@ class UserAccountHandlerModelTest {
         assertEquals("Check123", model.getFullname());
     }
 
+    @Test
+    void assignUserRoleExceptionTest(){
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> model.assignUserRole(9), "");
+
+    }
 
 }
