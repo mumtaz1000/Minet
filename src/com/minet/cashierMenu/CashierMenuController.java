@@ -5,13 +5,11 @@ import com.minet.utils.PrintHandler;
 import java.util.Scanner;
 
 public class CashierMenuController {
-    private final CashierMenuView view;
     private final CashierMenuModel model;
     private final Scanner scanner;
 
-    public CashierMenuController(CashierMenuModel model, CashierMenuView view) {
+    public CashierMenuController(CashierMenuModel model) {
         this.model = model;
-        this.view = view;
         this.scanner = new Scanner(System.in);
     }
 

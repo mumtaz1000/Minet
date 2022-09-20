@@ -1,0 +1,26 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+i
+java:S20950"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(¯…ºãüÿÿÿÿ
+i
+java:S2095e"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(¹öÔ¿øÿÿÿÿ
+i
+java:S2095"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(†–à²ùÿÿÿÿ
+i
+java:S2095c"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(Ú‡ãáüÿÿÿÿ
+\	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ
+;
+java:S1659" Declare "id" on a separate line.(÷æí¿üÿÿÿÿ
+N	java:S106""9Replace this use of System.out or System.err by a logger.(¨Áû†
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(Â¥®¸
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(¹ÃÜ“ıÿÿÿÿ
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(éí÷„ùÿÿÿÿ
+N	java:S106G"9Replace this use of System.out or System.err by a logger.(Ûõš
+S	java:S106["9Replace this use of System.out or System.err by a logger.(öÛ¸ÿÿÿÿÿ
+N	java:S106m"9Replace this use of System.out or System.err by a logger.(¦¤ó‘
+U	java:S899|";Do something with the "boolean" value returned by "delete".(šğ–…ûÿÿÿÿ
+i
+java:S4042|"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(šğ–…ûÿÿÿÿ
+N	java:S106}"9Replace this use of System.out or System.err by a logger.(¨…¬ƒ
+p
+java:S3012ƒ"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ˆ§ñı

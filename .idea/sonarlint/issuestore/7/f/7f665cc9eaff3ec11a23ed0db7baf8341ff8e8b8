@@ -1,0 +1,7 @@
+
+|
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¾Î›Š8Òè³à³0
+W
+java:S1118":Add a private constructor to hide the implicit public one.(‚õ…©8»Áà³0
+E
+java:S4425"(Use String.format( "%02X", ...) instead.(£ù8Õè³à³0

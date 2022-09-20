@@ -4,7 +4,7 @@ public class CashierMenu {
     public CashierMenu(){
         CashierMenuModel model = new CashierMenuModel();
         CashierMenuView view = new CashierMenuView(model.getMenuOptions());
-        CashierMenuController controller = new CashierMenuController(model, view);
+        CashierMenuController controller = new CashierMenuController(model);
 
         controller.requestUserInput();
     }

@@ -22,15 +22,6 @@ public class Server {
                 thread.start();
             }
         } catch (IOException error) {
-
-        }
-    }
-    public void closeServerSocket(){
-        try {
-            if(serverSocket != null){
-                serverSocket.close();
-            }
-        } catch(IOException error){
             error.printStackTrace();
         }
     }
