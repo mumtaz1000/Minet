@@ -57,7 +57,7 @@ public class InventoryModel {
         fileHandlerObject.updateFile(productString, updatedString, getInventoryFileName());
     }
 
-    public void reduceProductAmount(String filename, String productName, String productAmountToRemove) throws IOException{
+    public void reduceProductAmount(String filename, String productName, String productAmountToRemove) throws IOException {
         FileHandler fileHandlerObject = new FileHandler();
         String updatedString;
         int productQuantityIndex = 2;
@@ -66,15 +66,13 @@ public class InventoryModel {
         int totalProductAmount = Integer.parseInt(productList.get(productQuantityIndex));
         int updatedAmount = totalProductAmount - Integer.parseInt(productAmountToRemove);
 
-        if (updatedAmount > 1 ) {
+        if (updatedAmount > 1) {
             productList.set(productQuantityIndex, String.valueOf(updatedAmount));
-            updatedString = String.join(",",productList);
+            updatedString = String.join(",", productList);
             fileHandlerObject.updateFile(productString, updatedString, getInventoryFileName());
         } else {
             System.out.println("Product is out of stock!!!");
         }
     }
 
-    public void reduceProductAmount() {
-    }
 }

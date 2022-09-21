@@ -7,13 +7,11 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 public class HomeMenuController {
-    private final HomeMenuView view;
     private final HomeMenuModel model;
     private final Scanner scanner;
 
-    public HomeMenuController(HomeMenuModel model, HomeMenuView view) {
+    public HomeMenuController(HomeMenuModel model) {
         this.model = model;
-        this.view = view;
         this.scanner = new Scanner(System.in);
     }
 

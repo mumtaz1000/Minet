@@ -1,2 +1,4 @@
 
 n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÊŠñ)
+K
+java:S1481")Remove this unused "view" local variable.(ÂßÀ¡þÿÿÿÿ8Ä¾±Úµ0
