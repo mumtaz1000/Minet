@@ -1,15 +1,0 @@
-
-[
-java:S1659"EDeclare "userData" and all following declarations on a separate line.(¤†¼
-N	java:S106""9Replace this use of System.out or System.err by a logger.(âñ¢ 
-N	java:S106%"9Replace this use of System.out or System.err by a logger.(¤Ùª·
-S	java:S106*"9Replace this use of System.out or System.err by a logger.(ĞÄÙ—ıÿÿÿÿ
-2
-java:S6205>"Remove this redundant block.(€Ûøø
-N	java:S106?"9Replace this use of System.out or System.err by a logger.(öòÉ
->
-java:S6205A"Remove this redundant block.(Ğ€ø•ıÿÿÿÿ8ë™’µ´0
-N	java:S106B"9Replace this use of System.out or System.err by a logger.(•íÒè
->
-java:S6205D"Remove this redundant block.(¬ªİïûÿÿÿÿ8Á“İ´0
-Z	java:S106G"9Replace this use of System.out or System.err by a logger.(ñ£‡øÿÿÿÿ8ì™’µ´0
