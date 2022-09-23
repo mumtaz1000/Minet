@@ -21,6 +21,9 @@ public class Login extends UserAccountHandlerController {
         boolean isPasswordCorrect;
 
         try {
+            System.out.println();
+            System.out.println("----------------------");
+            System.out.println("Login menu:");
             requestUsername();
             if (fileHandlerObject.searchDataFromFile(model.getUsername(), usernameIndex, model.getUserFileName())) {
                 requestPassword();

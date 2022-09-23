@@ -10,6 +10,15 @@ public class ReciptModel {
     private String productName;
     private String productPrice;
     private String CustomerName;
+    private String requiredReciptNumber;
+
+    public String getRequiredReciptNumber() {
+        return requiredReciptNumber;
+    }
+
+    public void setRequiredReciptNumber(String requiredReciptNumber) {
+        this.requiredReciptNumber = requiredReciptNumber;
+    }
 
     public String getFilename(){
         return filename;
@@ -51,10 +60,10 @@ public class ReciptModel {
         return reciptNo + "," + customerName + "," + productName + "," + productPrice;
     }
 
-    public void searchReciptNumber (String filename,String reciptNumber){
+    public String searchReciptNumber (String filename,String reciptNumber){
         FileHandler file = new FileHandler();
 
-        file.readFile(filename, reciptNumber);
+        return file.readFile(filename, reciptNumber);
     }
 
 }

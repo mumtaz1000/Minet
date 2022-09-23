@@ -26,6 +26,11 @@ public class ReciptController {
         model.setCustomerName(customerName);
     }
 
+    private void requestReciptNumber() {
+        String reciptNumber = view.reciptNumberMessage();
+
+        model.setRequiredReciptNumber(reciptNumber);
+    }
     public void createNewRecipt() throws IOException {
         String recipeNo = model.createReciptNumber();
         FileHandler file = new FileHandler();
@@ -39,4 +44,9 @@ public class ReciptController {
         file.writeToFile(reciptData, model.getFilename());
     }
 
+    public void requestReciptNumberToSearch(){
+
+        requestReciptNumber();
+        model.searchReciptNumber(model.getFilename(),model.getRequiredReciptNumber());
+    }
 }

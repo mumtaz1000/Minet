@@ -22,4 +22,10 @@ public class ReciptView {
 
         return scanner.nextLine();
     }
+
+    public String reciptNumberMessage() {
+        System.out.println("Please enter recipt number to search");
+
+        return scanner.nextLine();
+    }
 }

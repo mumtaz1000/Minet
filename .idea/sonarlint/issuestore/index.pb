@@ -19,12 +19,6 @@ Y
 )src/test/UserAccountHandlerModelTest.java,b\0\b0de25179043e0ce685b6cbf323b51c2245d7c80
 H
 src/assets/Inventory.txt,7\b\7b1e8071f31fc410450166a7221b39714b7ebbf1
-P
- src/com/minet/signup/Signup.java,5\2\521cc2acce8d3797bb72f3e6c5a032e1dfe9b865
-X
-(src/com/minet/homeMenu/HomeMenuView.java,d\3\d3afa3aa8ab89fd4ee5d85eb15fb37887da2dd01
-T
-$src/com/minet/homeMenu/HomeMenu.java,a\b\ab4905383fc6100b6f11312a0eec4e318ca6d8b6
 T
 $src/assets/UserAccountCredential.txt,d\d\dd0b4ccf48f49c34be880df1f057b362d6d7cd37
 Z
