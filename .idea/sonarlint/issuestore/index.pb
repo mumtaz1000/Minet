@@ -3,12 +3,6 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 9
 	Minet.iml,0\6\06e62b8b2924a6547be4f6a3ddaf2697c25c6558
-H
-src/assets/OrderList.txt,a\5\a56a0ca7b7a2f85fac73151001c416d7d2c36e7c
-I
-src/assets/OrderItems.txt,d\6\d69d4270c3505854b3932c31bdc90d7c0aeab60b
-P
- src/assets/TransactionRecord.txt,e\2\e295303862635a7fcf88a0c77a5c9a1208e10dc6
 R
 "src/test/CashierMenuModelTest.java,9\3\934373220ba08be2fbf634ac9168dab7552b84a5
 P
@@ -25,12 +19,8 @@ Y
 )src/test/UserAccountHandlerModelTest.java,b\0\b0de25179043e0ce685b6cbf323b51c2245d7c80
 H
 src/assets/Inventory.txt,7\b\7b1e8071f31fc410450166a7221b39714b7ebbf1
-J
-src/assets/AtmUserData.txt,5\5\556d15ad96229cd5063a562b16320e9899289116
 P
  src/com/minet/signup/Signup.java,5\2\521cc2acce8d3797bb72f3e6c5a032e1dfe9b865
-^
-.src/com/minet/cashierMenu/CashierMenuView.java,0\0\00980e3d33b3fe26097fb3038bac8b656c17042e
 X
 (src/com/minet/homeMenu/HomeMenuView.java,d\3\d3afa3aa8ab89fd4ee5d85eb15fb37887da2dd01
 T

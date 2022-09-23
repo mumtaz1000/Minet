@@ -1,5 +1,7 @@
 package com.minet.chat;
 
+import com.minet.utils.FileHandler;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -29,11 +31,14 @@ public class ClientHandler implements Runnable {
     @Override
     public void run() {
         String messageFromClient;
+        String fileName = "src/assets/Chat.txt";
+        FileHandler file = new FileHandler();
 
         while (socket.isConnected()) {
             try {
                 messageFromClient = bufferedReader.readLine();
                 broadcastMessage(messageFromClient);
+                file.writeToFile(messageFromClient,fileName);
             } catch (IOException error) {
                 closeEverything(socket, bufferedReader, bufferedWriter);
                 break;

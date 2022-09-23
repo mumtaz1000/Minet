@@ -1,15 +1,14 @@
-package com.minet.cashierMenu;
+package com.minet.managerMenu;
 
 import com.minet.utils.PrintHandler;
 
-import java.io.IOException;
 import java.util.Scanner;
 
-public class CashierMenuController {
-    private final CashierMenuModel model;
+public class ManagerMenuController {
+    private final ManagerMenuModel model;
     private final Scanner scanner;
 
-    public CashierMenuController(CashierMenuModel model) {
+    public ManagerMenuController(ManagerMenuModel model) {
         this.model = model;
         this.scanner = new Scanner(System.in);
     }
@@ -21,8 +20,7 @@ public class CashierMenuController {
             int selectedOption = Integer.parseInt(input);
 
             model.handleOption(selectedOption);
-        }
-        catch (NumberFormatException | IndexOutOfBoundsException | IOException exception) {
+        } catch (NumberFormatException | IndexOutOfBoundsException exception) {
             PrintHandler.printInvalidOption();
             PrintHandler.printRequest();
             requestUserInput();

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class UserAccountHandlerModel {
 
-    private final String fileName = "src/assets/AtmUserData.txt";
+    private final String fileName = "src/assets/UserData.txt";
     private String fullname;
     private String username;
     private String password;

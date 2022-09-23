@@ -1,6 +1,7 @@
 package com.minet.login;
 
 import com.minet.cashierMenu.CashierMenu;
+import com.minet.managerMenu.ManagerMenu;
 import com.minet.userAccountHandler.UserAccountHandlerController;
 import com.minet.utils.FileHandler;
 
@@ -63,7 +64,7 @@ public class Login extends UserAccountHandlerController {
                 System.out.println("You are admin");
             }
             case "Manager" -> {
-                System.out.println("You are manager");
+                new ManagerMenu();
             }
             case "Cashier" -> {
                 new CashierMenu();
